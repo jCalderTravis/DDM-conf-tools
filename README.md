@@ -2,7 +2,7 @@
 
 This repository contains various functions to assist with the modelling of confidence, as set out in the manuscript [Expressions for Bayesian confidence of drift diffusion observers in dynamic stimuli tasks](https://www.biorxiv.org/content/10.1101/2020.02.25.965384v3.abstract). 
 
-Author: Joshua Calder-Travis, j.calder.travis@gmail.com
+Author: [Joshua Calder-Travis](https://scholar.google.com/citations?user=-9asgxcAAAAJ&hl=en)
 
 ## History 
 Reviewed all code 15/09/2023
