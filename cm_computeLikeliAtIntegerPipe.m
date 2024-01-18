@@ -190,7 +190,7 @@ end
 
 if any(strcmp(reguMode, {'Reg1', 'Reg2'})) && (sum(forcedTrials) > 0)
     finalRegCost(forcedTrials) = findForcedCondRegularisationCost(Data, ...
-        forcedTrials, ParamStruct, probResp, forcedParamPos);
+        forcedTrials, ParamStruct, probResp);
 else
     assert(strcmp(reguMode, 'NoRg'))
 end
