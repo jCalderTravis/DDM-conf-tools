@@ -16,7 +16,7 @@ function [DSet, binEdges] = prepDataForComputationalModelling(DSet, binning, ...
 % OUTPUT
 % binEdges  For the final participant only, gives the edges of the 
 %           confidence bins in values of the original
-%           confidence scale. See mT_makeOrdinalVar for more.
+%           confidence scale. See mT_makeOrdinalVar for more information.
 
 if isempty(varargin)
     breakTies = false;
@@ -32,8 +32,6 @@ end
 
 %% Bin confidence
 
-% Recode confidence scores so they reflect not p(correct) but 
-% p(right hand side box). Then bin the scores.
 for iPtpnt = 1 : length(DSet.P)
 
     blockType = DSet.P(iPtpnt).Data.BlockType;

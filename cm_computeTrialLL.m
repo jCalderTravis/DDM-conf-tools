@@ -76,6 +76,8 @@ else
 end
 
 % Check 
+assert(length(Data.ConfCat) == length(trialLL))
+assert(all(isnan(trialLL(~findIncludedTrials(Data)))))
 if any(isnan(trialLL(findIncludedTrials(Data)))); error('Bug'); end
 
 

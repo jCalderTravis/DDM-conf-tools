@@ -73,3 +73,7 @@ cumulativeProb = [zeros(length(Data.ConfCat), 1), cumulativeProb(:, 1:(end-1))];
 
 drawnBin = rand(length(Data.ConfCat), 1) > cumulativeProb;
 SimConf = sum(drawnBin, 2);
+
+assert(length(SimConf) == length(Data.RtPrec))
+assert(~any(isnan(SimConf(validTrials))))
+assert(all(isnan(SimConf(~validTrials))))
