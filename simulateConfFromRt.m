@@ -75,5 +75,10 @@ drawnBin = rand(length(Data.ConfCat), 1) > cumulativeProb;
 SimConf = sum(drawnBin, 2);
 
 assert(length(SimConf) == length(Data.RtPrec))
+assert(isequal(size(estEvQual), size(SimConf)))
+assert(isequal(size(estEvQual), size(validTrials)))
 assert(~any(isnan(SimConf(validTrials))))
-assert(all(isnan(SimConf(~validTrials))))
+
+SimConf(~validTrials) = nan;
+estEvQual(~validTrials) = nan;
+
